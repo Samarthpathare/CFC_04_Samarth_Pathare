@@ -61,10 +61,36 @@ int main()
 		scanf("%d",&Students[le].stuRollNo);
 
 		//Taking name as input
-		printf("Enter Roll number:");
+		printf("Enter Name:");
+		scanf("%s", &students[le].stuName);
+
+		//Taking marks of 3 subjects as input
+		printf("Enter marks of subject 1:");
+		scanf("%d", &students[le].stuMarks1);
+
+		printf("Enter marks of subject 2:");
+		scanf("%d", &students[le].stuMarks2);
+
+		printf("Enter marks of subject 3:");
+		scanf("%d" &Students[le].stuMarks3);
+
+		// Calculation percentage
+		students[le].stuPercentage = (students[le].stuMarks1 +
+									   students[le].stuMarks2 +
+									   students[le].stuMarks3)/ 3.0;
 		
-		
-		
-			
-	
+	}
+	//Displaying reports card
+	printf("\n------ STUDENT REPORT CARD------\n");
+	for(int le = 0; le < numberOfStudents; le++)
+	{
+		printf("\nstudent %d:\n", le + 1);
+		printf("Roll No: %d\n", students[le].stuName);
+		printf("Name: %s\n", students[le].stuMarks1);
+		printf("subject 1 Marks: %d\n", students[le].stuMarks1);
+		printf("subject 2 Marks: %d\n", students[le].stuMarks2);
+		printf("subject 3 Marks: %d\n", students[le].stuPercentage);
+	}
+	// Returning 0 to indicate successful execution
+	return(0);
 }
