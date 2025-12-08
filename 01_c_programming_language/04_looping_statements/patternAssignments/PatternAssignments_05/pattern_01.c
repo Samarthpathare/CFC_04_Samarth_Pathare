@@ -26,12 +26,11 @@ int main(void)
         {
             printf("   ");
         }
-        temp = num; // temp = starting number of the row
+        temp = num; //starting number of the row
         // print number
-        for(ile = 0; ile <=ole; ++ile)
+        for(ile = temp; ile >= 1; --ile)
         {
-            printf("%d  ",temp);
-            temp--;
+            printf("%d  ",ile);
         }
         num += 2;
         printf("\n");
